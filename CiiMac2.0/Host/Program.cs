@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ServiceModel.Web;
 
 namespace Host
 {
     class Program
     {
-      
+
         static void Main(string[] args)
         {
-            WebServiceHost host = new WebServiceHost(typeof(WebRestExerciseService));
+            WebServiceHost host = new WebServiceHost(typeof(Service.CompanyService));
 
             host.Open();
             Console.WriteLine("Host started @ " + DateTime.Now.ToString());
+            DisplayHost(host);
             Console.ReadLine();
             host.Close();
-
         }
 
         private static void DisplayHost(WebServiceHost host)

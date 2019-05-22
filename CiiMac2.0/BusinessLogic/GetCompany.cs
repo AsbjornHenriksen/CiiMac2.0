@@ -15,10 +15,9 @@ namespace BusinessLogic
         {
             APIConnector = new APIConnector();
         }
-        public Company GetCompanyTest()
+        public List<Company> GetCompanyTest()
         {
-            Company company = new Company(); 
-            return (Company)APIConnector.GetJsonFromApiAsync("customers", company).Result;
+            return (List<Company>)APIConnector.GetJsonFromApiAsync("customers").Result;
         }
 
     }

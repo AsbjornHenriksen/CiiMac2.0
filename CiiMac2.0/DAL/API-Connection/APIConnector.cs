@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,33 +12,45 @@ namespace DAL.API_Connection
 {
     public class APIConnector
     {
+        List<Company> objList;
         HttpClient httpClient; 
         public APIConnector() {
             httpClient = new HttpClient();
         }
-        public async Task<object> GetJsonFromApiAsync(string url, object obj)
+        public async Task <List<Company>> GetJsonFromApiAsync(string url)
         {
             string newString;
-            Type ob = obj.GetType();
-            //if (ob.Equals(typeof(User)))
-            //{
-            //    newString = BaseUrl.GetBaseUrl() + url.Replace("{username}", id);
-            //}
-            //else { newString = BaseUrl.GetBaseUrl() + url.Replace("{id}", id); }
             newString = BaseUrl.GetBaseUrl() + url;
+            objList = new List<Company>();
 
             Uri uri = new Uri(newString);
             var apirequest = httpClient.GetAsync(uri).Result;
             apirequest.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("X-AppSecretToken", "demo");
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("X-AgreementGrantToken", "demo");
-            string response = await apirequest.Content.ReadAsStringAsync();
+            HttpResponseMessage response = apirequest;
+            if (response.IsSuccessStatusCode)
+            {
+                // Parse the response body.
+                var dataObjects = response.Content.ReadAsAsync<IEnumerable<Company>>().Result;  //Make sure to add a reference to System.Net.Http.Formatting.dll
+                foreach (var d in dataObjects)
+                {
+                    Console.WriteLine("{0}", d.Name);
+                    objList.Add(d);
+                }
+            }
+            else
+            {
+                Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+            }
             //string news = Regex.Unescape( response);
-            var jsonString = response.Replace(@"\", "");
-            string final = jsonString.Trim().Substring(1, (jsonString.Length) - 2);
-            return JsonConvert.DeserializeObject(final, ob);
+            ////var jsonString = response.Replace(@"\", "");
+            ////string final = jsonString.Trim().Substring(1, (jsonString.Length) - 2);
+            ////return JsonConvert.DeserializeObject(final, obj);
+            return objList; 
 
         }
+
     }
 }
 

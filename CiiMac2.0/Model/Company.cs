@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -16,21 +17,19 @@ namespace Model
 
         [Key]
         [DataMember]
-        public Guid Id { get; set; }
+        [JsonProperty(PropertyName = "customerNumber")] 
+        public string Id { get; set; }
+        
         [DataMember]
         public string Name { get; set; }
 
         [DataMember]
-        public string CVR { get; set; }
+        [JsonProperty(PropertyName = "corporateIdentificationNumber")]
+        public string CorporateIdentificationNumber { get; set; }
 
         [DataMember]
-        public string ContactPerson { get; set; }
-
-        [DataMember]
-        public List<Address> Addresses { get; set; }
-
-
-
+        [JsonProperty(PropertyName = "address")]
+        public Address Address { get; set; }
 
         public Guid LoginId { get; set; }
         [ForeignKey("LoginId")]
