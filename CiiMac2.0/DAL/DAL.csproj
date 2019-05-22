@@ -73,9 +73,21 @@
     <Compile Include="API-Connection\APIConnector.cs" />
     <Compile Include="API-Connection\BaseUrl.cs" />
     <Compile Include="DBContext.cs" />
-    <Compile Include="Migrations\201905150844153_CiiMac2.0.cs" />
-    <Compile Include="Migrations\201905150844153_CiiMac2.0.Designer.cs">
-      <DependentUpon>201905150844153_CiiMac2.0.cs</DependentUpon>
+    <Compile Include="Migrations\201905220829204_secound.cs" />
+    <Compile Include="Migrations\201905220829204_secound.Designer.cs">
+      <DependentUpon>201905220829204_secound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905220831063_Thrid.cs" />
+    <Compile Include="Migrations\201905220831063_Thrid.Designer.cs">
+      <DependentUpon>201905220831063_Thrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905220850522_dd.cs" />
+    <Compile Include="Migrations\201905220850522_dd.Designer.cs">
+      <DependentUpon>201905220850522_dd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905220853258_cvr.cs" />
+    <Compile Include="Migrations\201905220853258_cvr.Designer.cs">
+      <DependentUpon>201905220853258_cvr.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,12 +99,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905150844153_CiiMac2.0.resx">
-      <DependentUpon>201905150844153_CiiMac2.0.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905220829204_secound.resx">
+      <DependentUpon>201905220829204_secound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220831063_Thrid.resx">
+      <DependentUpon>201905220831063_Thrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220850522_dd.resx">
+      <DependentUpon>201905220850522_dd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220853258_cvr.resx">
+      <DependentUpon>201905220853258_cvr.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

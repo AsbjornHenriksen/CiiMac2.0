@@ -10,7 +10,7 @@ namespace DAL.API_Connection
     {
         public static string GetBaseUrl()
         {
-            return "https://restapi.e-conomic.com";
+            return "https://restapi.e-conomic.com/";
         }
     }
 }

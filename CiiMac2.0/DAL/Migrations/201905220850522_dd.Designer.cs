@@ -7,13 +7,13 @@ namespace DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CiiMac20 : IMigrationMetadata
+    public sealed partial class dd : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CiiMac20));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(dd));
         
         string IMigrationMetadata.Id
         {
-            get { return "201905150844153_CiiMac2.0"; }
+            get { return "201905220850522_dd"; }
         }
         
         string IMigrationMetadata.Source

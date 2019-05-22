@@ -11,7 +11,7 @@ namespace Service
     public class CompanyService : ICompanyService
     {
         GetCompany companyCtr = new GetCompany(); 
-        public List<Company> GetCompany()
+        public IEnumerable<Company> GetCompany()
         {
             return companyCtr.GetCompanyTest();  
         }

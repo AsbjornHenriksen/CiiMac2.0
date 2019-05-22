@@ -15,9 +15,11 @@ namespace BusinessLogic
         {
             APIConnector = new APIConnector();
         }
-        public List<Company> GetCompanyTest()
+        public IEnumerable<Company> GetCompanyTest()
         {
-            return (List<Company>)APIConnector.GetJsonFromApiAsync("customers").Result;
+            Task<IEnumerable<Company>> test = APIConnector.GetJsonFromApiAsync("customers");
+            return test.Result;
+                
         }
 
     }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
+   
     [Table("Company")]
     [DataContract]
     public class Company
@@ -21,11 +22,12 @@ namespace Model
         public string Id { get; set; }
         
         [DataMember]
+        [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         [DataMember]
         [JsonProperty(PropertyName = "corporateIdentificationNumber")]
-        public string CorporateIdentificationNumber { get; set; }
+        public string Cvr { get; set; }
 
         [DataMember]
         [JsonProperty(PropertyName = "address")]

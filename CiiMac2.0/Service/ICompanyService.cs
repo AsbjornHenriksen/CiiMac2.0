@@ -12,7 +12,7 @@ namespace Service
     public interface ICompanyService
     {
         [OperationContract]
-        List<Company> GetCompany();
+        IEnumerable<Company> GetCompany();
     }
 
 }

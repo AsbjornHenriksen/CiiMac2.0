@@ -1,19 +1,38 @@
-﻿using System;
+﻿using Model;
+using Service;
+using System;
+using System.Collections.Generic;
 using System.ServiceModel.Web;
 
 namespace Host
 {
     class Program
     {
-
+       
         static void Main(string[] args)
         {
+            CompanyService companyService = new CompanyService();
             WebServiceHost host = new WebServiceHost(typeof(Service.CompanyService));
 
             host.Open();
             Console.WriteLine("Host started @ " + DateTime.Now.ToString());
             DisplayHost(host);
-            Console.ReadLine();
+
+
+
+            foreach (var e in companyService.GetCompany())
+            {
+                Console.WriteLine(e.Name);
+
+            }
+
+          
+
+    
+
+         
+
+           Console.ReadLine();
             host.Close();
         }
 

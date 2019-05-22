@@ -10,10 +10,7 @@ namespace DAL
 {
     public class DBContext : DbContext
     {
-        public DBContext() : base("CiiMac")
-        {
-
-        }
+   
 
         public DbSet<Login> Logins { get; set; }
         public DbSet<Company> Companies { get; set; }
