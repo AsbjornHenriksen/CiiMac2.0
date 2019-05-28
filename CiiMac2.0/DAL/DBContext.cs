@@ -12,7 +12,7 @@ namespace DAL
     {
    
 
-        public DbSet<Login> Logins { get; set; }
+   
         public DbSet<Company> Companies { get; set; }
 
         public DbSet<Address> Addresses { get; set; }

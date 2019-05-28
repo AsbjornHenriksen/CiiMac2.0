@@ -20,19 +20,10 @@ namespace Host
 
 
 
-            foreach (var e in companyService.GetCompany())
-            {
-                Console.WriteLine(e.Name);
+            companyService.UpdateDatabase();
 
-            }
 
-          
-
-    
-
-         
-
-           Console.ReadLine();
+            Console.ReadLine();
             host.Close();
         }
 

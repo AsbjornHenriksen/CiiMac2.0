@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace Model.DatabaseModels
 {
-    [Table("Login")]
-    [DataContract]
-
-    public class Login
+    public class User
     {
         [DataMember]
-        [Key]
         public Guid Id { get; set; }
+        [DataMember]
+        public string FirstName { get; set; }
+        [DataMember]
+        public string LastName { get; set;  }
 
         [DataMember]
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
         [DataMember]
         public string Email { get; set; }
@@ -30,5 +28,6 @@ namespace Model
         public byte[] CompletePassword { private get; set; }
 
         public byte[] PasswordSalt { private get; set; }
+
     }
 }

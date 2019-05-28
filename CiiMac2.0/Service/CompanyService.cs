@@ -4,16 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessLogic;
-using Model;
+using BusinessLogic.Controllers; 
+using Model.Models;
 
 namespace Service
 {
     public class CompanyService : ICompanyService
     {
-        GetCompany companyCtr = new GetCompany(); 
-        public IEnumerable<Company> GetCompany()
+        public ListOfCollections GetList()
         {
-            return companyCtr.GetCompanyTest();  
+            GetListOfCompanies getListOfCompanies = new GetListOfCompanies();
+            return getListOfCompanies.GetListOfCustomers();
+        }
+
+        public void UpdateDatabase()
+        {
+            UpdateDatabaseCtr updateDatabaseCtr = new UpdateDatabaseCtr();
+            updateDatabaseCtr.UpdateDatabase();  
         }
     }
 }

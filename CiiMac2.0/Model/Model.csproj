@@ -52,12 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="City.cs" />
-    <Compile Include="Company.cs" />
-    <Compile Include="Country.cs" />
-    <Compile Include="Level.cs" />
-    <Compile Include="Login.cs" />
+    <Compile Include="DatabaseModels\Address.cs" />
+    <Compile Include="DatabaseModels\City.cs" />
+    <Compile Include="ApiModels\Collection.cs" />
+    <Compile Include="DatabaseModels\Company.cs" />
+    <Compile Include="DatabaseModels\Country.cs" />
+    <Compile Include="DatabaseModels\Level.cs" />
+    <Compile Include="ApiModels\Create.cs" />
+    <Compile Include="ApiModels\CustomerGroup.cs" />
+    <Compile Include="ApiModels\Invoices.cs" />
+    <Compile Include="ApiModels\Layout.cs" />
+    <Compile Include="ApiModels\ListOfCollections.cs" />
+    <Compile Include="ApiModels\MetaData.cs" />
+    <Compile Include="ApiModels\Pagination.cs" />
+    <Compile Include="ApiModels\PaymentTerms.cs" />
+    <Compile Include="ApiModels\Templates.cs" />
+    <Compile Include="ApiModels\VatZone.cs" />
+    <Compile Include="DatabaseModels\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

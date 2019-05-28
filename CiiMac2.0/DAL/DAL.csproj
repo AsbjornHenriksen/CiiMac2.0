@@ -72,7 +72,11 @@
   <ItemGroup>
     <Compile Include="API-Connection\APIConnector.cs" />
     <Compile Include="API-Connection\BaseUrl.cs" />
+    <Compile Include="API-Connection\DeserializeJsonToObjects.cs" />
+    <Compile Include="API-Connection\SerializerSettings.cs" />
+    <Compile Include="DatabaseAccess\UpdateDatabase.cs" />
     <Compile Include="DBContext.cs" />
+    <Compile Include="MergeModels\MergeCompany.cs" />
     <Compile Include="Migrations\201905220829204_secound.cs" />
     <Compile Include="Migrations\201905220829204_secound.Designer.cs">
       <DependentUpon>201905220829204_secound.cs</DependentUpon>
@@ -88,6 +92,10 @@
     <Compile Include="Migrations\201905220853258_cvr.cs" />
     <Compile Include="Migrations\201905220853258_cvr.Designer.cs">
       <DependentUpon>201905220853258_cvr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905271136076_databaseUpdate.cs" />
+    <Compile Include="Migrations\201905271136076_databaseUpdate.Designer.cs">
+      <DependentUpon>201905271136076_databaseUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905220853258_cvr.resx">
       <DependentUpon>201905220853258_cvr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905271136076_databaseUpdate.resx">
+      <DependentUpon>201905271136076_databaseUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

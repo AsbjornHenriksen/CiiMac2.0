@@ -11,32 +11,47 @@ using System.Threading.Tasks;
 namespace Model
 {
    
+    
+    [DataContract(Name = "Collection")]
     [Table("Company")]
-    [DataContract]
     public class Company
     {
 
         [Key]
         [DataMember]
-        [JsonProperty(PropertyName = "customerNumber")] 
-        public string Id { get; set; }
-        
+        [JsonProperty(PropertyName = "customerNumber")]
+        public long CustomerNumber { get; set; }
+
         [DataMember]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         [DataMember]
         [JsonProperty(PropertyName = "corporateIdentificationNumber")]
-        public string Cvr { get; set; }
+        public string CorporateIdentificationNumber { get; set; }
 
         [DataMember]
         [JsonProperty(PropertyName = "address")]
-        public Address Address { get; set; }
+        public string Address { get; set; }
 
-        public Guid LoginId { get; set; }
-        [ForeignKey("LoginId")]
+        [DataMember]
+        public string Phone { get; set; }
 
-        public Login Login { get; set; }
+        [DataMember]
+        public string Email { get; set; }
+
+        [DataMember]
+        public int Level { get; set; }
+
+        public byte[] CompletePassword { private get; set; }
+
+        public byte[] PasswordSalt { private get; set; }
+
+
+
+      
+
+     
 
 
     }

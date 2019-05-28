@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetCompany.cs" />
+    <Compile Include="Controllers\UpdateDatabaseCtr.cs" />
+    <Compile Include="GetListOfCompanies.cs" />
+    <Compile Include="PasswordHashAndSalt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +55,9 @@
       <Project>{E244833F-E8A6-494A-8448-AAA29CC1B240}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
