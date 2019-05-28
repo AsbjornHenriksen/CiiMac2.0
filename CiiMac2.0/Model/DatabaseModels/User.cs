@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -9,6 +11,7 @@ namespace Model.DatabaseModels
 {
     public class User
     {
+        [Key]
         [DataMember]
         public Guid Id { get; set; }
         [DataMember]
@@ -24,6 +27,10 @@ namespace Model.DatabaseModels
 
         [DataMember]
         public int Level { get; set; }
+
+        public long CustomerNumber { get; set; }
+        [ForeignKey("CustomerNumber")]
+        public Company Company { get; set; }
 
         public byte[] CompletePassword { private get; set; }
 
