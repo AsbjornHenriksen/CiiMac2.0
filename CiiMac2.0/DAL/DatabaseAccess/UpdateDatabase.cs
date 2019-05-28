@@ -1,5 +1,5 @@
 ﻿using DAL.MergeModels;
-using Model;
+using Model.DatabaseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

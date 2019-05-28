@@ -1,5 +1,5 @@
 ﻿using DAL.API_Connection;
-using Model;
+using Model.DatabaseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

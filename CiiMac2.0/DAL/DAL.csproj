@@ -75,6 +75,7 @@
     <Compile Include="API-Connection\DeserializeJsonToObjects.cs" />
     <Compile Include="API-Connection\SerializerSettings.cs" />
     <Compile Include="DatabaseAccess\UpdateDatabase.cs" />
+    <Compile Include="DatabaseAccess\UserDB.cs" />
     <Compile Include="DBContext.cs" />
     <Compile Include="MergeModels\MergeCompany.cs" />
     <Compile Include="Migrations\201905220829204_secound.cs" />
