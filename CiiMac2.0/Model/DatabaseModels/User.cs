@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace Model.DatabaseModels
 {
+
+    [Table("User")]
     public class User
     {
         [Key]

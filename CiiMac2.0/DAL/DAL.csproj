@@ -127,6 +127,10 @@
     <Compile Include="Migrations\201905271136076_databaseUpdate.Designer.cs">
       <DependentUpon>201905271136076_databaseUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905280759511_user.cs" />
+    <Compile Include="Migrations\201905280759511_user.Designer.cs">
+      <DependentUpon>201905280759511_user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905271136076_databaseUpdate.resx">
       <DependentUpon>201905271136076_databaseUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905280759511_user.resx">
+      <DependentUpon>201905280759511_user.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
