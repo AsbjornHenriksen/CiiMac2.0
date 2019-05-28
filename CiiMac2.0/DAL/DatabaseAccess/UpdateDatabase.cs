@@ -35,7 +35,7 @@ namespace DAL.DatabaseAccess
 
 
 
-        private void InsertNewCompanies(byte[] completePassword, byte[] passwordSalt, Company company)
+        private void InsertNewCompanies(byte[] completePassword, byte[] passwordSalt, Company company, DBContext dBContext)
         {
 
        
@@ -45,28 +45,36 @@ namespace DAL.DatabaseAccess
                         company.CompletePassword = completePassword;
                         company.PasswordSalt = passwordSalt;
                     }
-                    context.Companies.Add(company); 
+                    dBContext.Companies.Add(company); 
          }
 
-        private void UpdateCompaniesFromApi(Company company)
+        private void UpdateCompaniesFromApi(Company company, DBContext dBContext)
         {
         
                     if (CheckIfCompanyAlreadyExist(company.CustomerNumber))
                     {
-                        context.Companies.Add(company); 
+                        Company com = dBContext.Companies.Where(x => x.CustomerNumber == company.CustomerNumber).FirstOrDefault();
+                        com = company; 
+                        
+               
                     }
 
         }
 
         public void UpdateDatabaseCreateAndUpdate(byte[] completePassword, byte[] passwordSalt) {
-            using (var context = new DBContext())
+
+            using (var transaction = new System.Transactions.TransactionScope())
+            {
+                using (var context = new DBContext())
             {
                 foreach (Company company in merge.MergeLoginDatabaseModelWithApiCollection())
                 {
-                    InsertNewCompanies(completePassword, passwordSalt, company);
-                    UpdateCompaniesFromApi(company);
+                    InsertNewCompanies(completePassword, passwordSalt, company, context);
+                    UpdateCompaniesFromApi(company, context);
                 }
                 context.SaveChanges();
+            }
+                transaction.Complete();
             }
         }
 
