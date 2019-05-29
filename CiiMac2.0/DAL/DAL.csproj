@@ -104,6 +104,7 @@
     <Compile Include="API-Connection\BaseUrl.cs" />
     <Compile Include="API-Connection\DeserializeJsonToObjects.cs" />
     <Compile Include="API-Connection\SerializerSettings.cs" />
+    <Compile Include="DatabaseAccess\CompanyDB.cs" />
     <Compile Include="DatabaseAccess\UpdateDatabase.cs" />
     <Compile Include="DatabaseAccess\UserDB.cs" />
     <Compile Include="DBContext.cs" />

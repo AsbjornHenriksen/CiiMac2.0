@@ -5,30 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using BusinessLogic;
-using BusinessLogic.Controllers; 
+using BusinessLogic.Controllers;
+using Model.DatabaseModels;
 using Model.Models;
 
 namespace Service
 {
     public class CompanyService : ICompanyService
     {
-        UpdateDatabaseCtr updateDatabaseCtr;
-
+        CompanyCtr companyCtr; 
         public CompanyService()
         {
-            updateDatabaseCtr = new UpdateDatabaseCtr();
+            companyCtr = new CompanyCtr();
         }
-
+    
         public ListOfCollections GetList()
         {
             GetListOfCompanies getListOfCompanies = new GetListOfCompanies();
             return getListOfCompanies.GetListOfCustomers();
         }
 
-        public void UpdateDatabase()
+        public Company ReturnCompanyIfLoginIsCorrect(string email, string password)
         {
-            updateDatabaseCtr.UpdateDatabase(); 
+           return companyCtr.ReturnCompanyIfLoginIsCorrect(email, password); 
         }
+
+     
     }
   
 }

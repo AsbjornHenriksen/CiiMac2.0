@@ -51,6 +51,7 @@ namespace DAL.DatabaseAccess
                         company.CompletePassword = completePassword;
                         company.PasswordSalt = passwordSalt;
                         dBContext.Companies.Add(company);
+                        // sender mail inden det er blevet tiljøjet til databasen , IKKE GODT , det skal være efter. 
                         sendMail(company, temp);
                         
                     }

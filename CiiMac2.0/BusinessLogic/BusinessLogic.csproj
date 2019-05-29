@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CompanyCtr.cs" />
     <Compile Include="Controllers\UpdateDatabaseCtr.cs" />
     <Compile Include="Controllers\UserCtr.cs" />
     <Compile Include="GetListOfCompanies.cs" />

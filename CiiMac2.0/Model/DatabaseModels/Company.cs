@@ -43,9 +43,9 @@ namespace Model.DatabaseModels
         [DataMember]
         public int Level { get; set; }
 
-        public byte[] CompletePassword { private get; set; }
+        public byte[] CompletePassword { get; set; }
 
-        public byte[] PasswordSalt { private get; set; }
+        public byte[] PasswordSalt { get; set; }
 
 
     }

@@ -1,4 +1,5 @@
-﻿using Model.Models;
+﻿using Model.DatabaseModels;
+using Model.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace Service
         [OperationContract]
         ListOfCollections GetList();
         [OperationContract]
-        void UpdateDatabase(); 
+        Company ReturnCompanyIfLoginIsCorrect(string email, string password);
+
     }
 }
