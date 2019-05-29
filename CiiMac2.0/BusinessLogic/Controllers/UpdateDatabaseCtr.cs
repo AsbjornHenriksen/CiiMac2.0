@@ -4,32 +4,39 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
+using Timer = System.Timers.Timer;
 
 namespace BusinessLogic.Controllers
 {
     public class UpdateDatabaseCtr
     {
+         
+
         PasswordHashAndSalt passwordHashAndSalt;
         UpdateDatabase updateDB;
+        SendTemperaryPasswordToCompany sendTemperaryPasswordToCompany;
+
 
         public UpdateDatabaseCtr()
         {
             passwordHashAndSalt = new PasswordHashAndSalt();
             updateDB = new UpdateDatabase();
+            sendTemperaryPasswordToCompany = new SendTemperaryPasswordToCompany(); 
         }
 
         public void UpdateDatabase()
         {
-            string temp = passwordHashAndSalt.GenerateTemporaryPassword(10);
-            Dictionary<string, byte[]> dic = passwordHashAndSalt.HashAndSalt(temp);
-            byte[] passwordSalt = dic["passwordSalt"];
-            byte[] completePassword = dic["completePassword"];
-
-            updateDB.UpdateDatabaseCreateAndUpdate(completePassword, passwordSalt);
-
-
+             updateDB.UpdateDatabaseCreateAndUpdate(passwordHashAndSalt.HashAndSalt, passwordHashAndSalt.GenerateTemporaryPassword,sendTemperaryPasswordToCompany.SendPasswordToCompanyEmail);
         }
+
+       
+       
+     
+
+
 
     }
 }

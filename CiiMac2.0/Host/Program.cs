@@ -3,25 +3,26 @@ using Service;
 using System;
 using System.Collections.Generic;
 using System.ServiceModel.Web;
+using System.Timers;
 
 namespace Host
 {
     class Program
     {
-       
+        static Timer aTimer;
+        static int lastHour;
+        static CompanyService companyService;
         static void Main(string[] args)
         {
-            CompanyService companyService = new CompanyService();
+         
+
+            companyService = new CompanyService();
             WebServiceHost host = new WebServiceHost(typeof(Service.CompanyService));
 
             host.Open();
             Console.WriteLine("Host started @ " + DateTime.Now.ToString());
             DisplayHost(host);
-
-
-
             companyService.UpdateDatabase();
-
 
             Console.ReadLine();
             host.Close();
@@ -39,5 +40,8 @@ namespace Host
             }
             Console.WriteLine("------------------");
         }
+
+
+       
     }
 }

@@ -108,29 +108,9 @@
     <Compile Include="DatabaseAccess\UserDB.cs" />
     <Compile Include="DBContext.cs" />
     <Compile Include="MergeModels\MergeCompany.cs" />
-    <Compile Include="Migrations\201905220829204_secound.cs" />
-    <Compile Include="Migrations\201905220829204_secound.Designer.cs">
-      <DependentUpon>201905220829204_secound.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905220831063_Thrid.cs" />
-    <Compile Include="Migrations\201905220831063_Thrid.Designer.cs">
-      <DependentUpon>201905220831063_Thrid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905220850522_dd.cs" />
-    <Compile Include="Migrations\201905220850522_dd.Designer.cs">
-      <DependentUpon>201905220850522_dd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905220853258_cvr.cs" />
-    <Compile Include="Migrations\201905220853258_cvr.Designer.cs">
-      <DependentUpon>201905220853258_cvr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905271136076_databaseUpdate.cs" />
-    <Compile Include="Migrations\201905271136076_databaseUpdate.Designer.cs">
-      <DependentUpon>201905271136076_databaseUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905280759511_user.cs" />
-    <Compile Include="Migrations\201905280759511_user.Designer.cs">
-      <DependentUpon>201905280759511_user.cs</DependentUpon>
+    <Compile Include="Migrations\201905280941572_bigChange.cs" />
+    <Compile Include="Migrations\201905280941572_bigChange.Designer.cs">
+      <DependentUpon>201905280941572_bigChange.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -146,23 +126,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905220829204_secound.resx">
-      <DependentUpon>201905220829204_secound.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905220831063_Thrid.resx">
-      <DependentUpon>201905220831063_Thrid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905220850522_dd.resx">
-      <DependentUpon>201905220850522_dd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905220853258_cvr.resx">
-      <DependentUpon>201905220853258_cvr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905271136076_databaseUpdate.resx">
-      <DependentUpon>201905271136076_databaseUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905280759511_user.resx">
-      <DependentUpon>201905280759511_user.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905280941572_bigChange.resx">
+      <DependentUpon>201905280941572_bigChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

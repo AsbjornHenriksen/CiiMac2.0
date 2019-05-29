@@ -10,21 +10,14 @@ namespace BusinessLogic
 {
     public class PasswordHashAndSalt
     {
-        private Dictionary<string, byte[]> hashingAndSalting;
-        private static Random random;
-      
-
-        public PasswordHashAndSalt()
-        {
-            hashingAndSalting = new Dictionary<string, byte[]>();
-            random = new Random();
-         
-        }
+       
         
     #region HashingAndSalting
 
 	public Dictionary<string, byte[]> HashAndSalt(string password)
         {
+            Dictionary<string, byte[]> hashingAndSalting = hashingAndSalting = new Dictionary<string, byte[]>();
+
             byte[] passwordHash = Encoding.ASCII.GetBytes(password);
             byte[] passwordSalt = new byte[6];
             byte[] completePassword = new byte[passwordHash.Length + passwordSalt.Length];
@@ -50,13 +43,17 @@ namespace BusinessLogic
 
         #endregion
 
-        public string GenerateTemporaryPassword(int length)
+        public string GenerateTemporaryPassword()
         {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            return new string(Enumerable.Repeat(chars, length)
+              Random random = new Random();
+             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+              return new string(Enumerable.Repeat(chars, 10)
               .Select(s => s[random.Next(s.Length)]).ToArray());
 
         }
+
+    
+
 
         
     }

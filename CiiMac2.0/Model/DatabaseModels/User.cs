@@ -13,7 +13,8 @@ namespace Model.DatabaseModels
     [Table("User")]
     public class User
     {
-        [Key]
+        [KeyAttribute()]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [DataMember]
         public Guid Id { get; set; }
         [DataMember]

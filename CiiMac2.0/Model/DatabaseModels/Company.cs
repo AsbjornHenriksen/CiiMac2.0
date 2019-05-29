@@ -16,8 +16,8 @@ namespace Model.DatabaseModels
     [Table("Company")]
     public class Company
     {
-
-        [Key]
+        [KeyAttribute()]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [DataMember]
         [JsonProperty(PropertyName = "customerNumber")]
         public long CustomerNumber { get; set; }
@@ -46,12 +46,6 @@ namespace Model.DatabaseModels
         public byte[] CompletePassword { private get; set; }
 
         public byte[] PasswordSalt { private get; set; }
-
-
-
-      
-
-     
 
 
     }

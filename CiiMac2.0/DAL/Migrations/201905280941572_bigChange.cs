@@ -3,7 +3,7 @@ namespace DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Thrid : DbMigration
+    public partial class bigChange : DbMigration
     {
         public override void Up()
         {
@@ -50,42 +50,43 @@ namespace DAL.Migrations
                 "dbo.Company",
                 c => new
                     {
-                        Id = c.String(nullable: false, maxLength: 128),
+                        CustomerNumber = c.Long(nullable: false),
                         Name = c.String(),
                         CorporateIdentificationNumber = c.String(),
-                        LoginId = c.Guid(nullable: false),
-                        Address_Id = c.Guid(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Address", t => t.Address_Id)
-                .ForeignKey("dbo.Login", t => t.LoginId, cascadeDelete: true)
-                .Index(t => t.LoginId)
-                .Index(t => t.Address_Id);
-            
-            CreateTable(
-                "dbo.Login",
-                c => new
-                    {
-                        Id = c.Guid(nullable: false),
-                        Phone = c.Int(nullable: false),
+                        Address = c.String(),
+                        Phone = c.String(),
                         Email = c.String(),
                         Level = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.CustomerNumber);
+            
+            CreateTable(
+                "dbo.User",
+                c => new
+                    {
+                        Id = c.Guid(nullable: false),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        Phone = c.String(),
+                        Email = c.String(),
+                        Level = c.Int(nullable: false),
+                        CustomerNumber = c.Long(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Company", t => t.CustomerNumber, cascadeDelete: true)
+                .Index(t => t.CustomerNumber);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Company", "LoginId", "dbo.Login");
-            DropForeignKey("dbo.Company", "Address_Id", "dbo.Address");
+            DropForeignKey("dbo.User", "CustomerNumber", "dbo.Company");
             DropForeignKey("dbo.Address", "CountryId", "dbo.Country");
             DropForeignKey("dbo.Address", "CityId", "dbo.City");
-            DropIndex("dbo.Company", new[] { "Address_Id" });
-            DropIndex("dbo.Company", new[] { "LoginId" });
+            DropIndex("dbo.User", new[] { "CustomerNumber" });
             DropIndex("dbo.Address", new[] { "CountryId" });
             DropIndex("dbo.Address", new[] { "CityId" });
-            DropTable("dbo.Login");
+            DropTable("dbo.User");
             DropTable("dbo.Company");
             DropTable("dbo.Country");
             DropTable("dbo.City");

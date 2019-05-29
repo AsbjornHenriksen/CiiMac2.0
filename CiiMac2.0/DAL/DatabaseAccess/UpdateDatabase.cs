@@ -35,33 +35,45 @@ namespace DAL.DatabaseAccess
 
 
 
-        private void InsertNewCompanies(byte[] completePassword, byte[] passwordSalt, Company company, DBContext dBContext)
+        private void InsertNewCompanies(Func<string, Dictionary<string, byte[]>> passwordDic, Func<string> temporaryPassword,Action<Company, string> sendMail, Company company, DBContext dBContext)
         {
 
        
                     if (!CheckIfCompanyAlreadyExist(company.CustomerNumber))
                     {
+                         string temp = temporaryPassword();
+                         Dictionary<string, byte[]> dic = passwordDic(temp);
+                         byte[] passwordSalt = dic["passwordSalt"];
+                         byte[] completePassword = dic["completePassword"];
+
+
                         company.Level = Convert.ToInt32(Level.Company);
                         company.CompletePassword = completePassword;
                         company.PasswordSalt = passwordSalt;
+                        dBContext.Companies.Add(company);
+                        sendMail(company, temp);
+                        
                     }
-                    dBContext.Companies.Add(company); 
-         }
+                    
+        }
 
         private void UpdateCompaniesFromApi(Company company, DBContext dBContext)
         {
         
                     if (CheckIfCompanyAlreadyExist(company.CustomerNumber))
                     {
-                        Company com = dBContext.Companies.Where(x => x.CustomerNumber == company.CustomerNumber).FirstOrDefault();
-                        com = company; 
-                        
-               
+                      Company com = dBContext.Companies.Where(c => c.CustomerNumber == company.CustomerNumber).First();
+                      com.Name = company.Name;
+                      com.CorporateIdentificationNumber = company.CorporateIdentificationNumber;
+                      com.Address = company.Address;
+                      com.Phone = company.Phone;
+                      com.Email = company.Email; 
+                    
                     }
 
         }
 
-        public void UpdateDatabaseCreateAndUpdate(byte[] completePassword, byte[] passwordSalt) {
+        public void UpdateDatabaseCreateAndUpdate(Func<string, Dictionary<string, byte[]>> passwordDic,  Func<string> temporaryPassword, Action<Company, string> sendMail) {
 
             using (var transaction = new System.Transactions.TransactionScope())
             {
@@ -69,11 +81,12 @@ namespace DAL.DatabaseAccess
             {
                 foreach (Company company in merge.MergeLoginDatabaseModelWithApiCollection())
                 {
-                    InsertNewCompanies(completePassword, passwordSalt, company, context);
+                    InsertNewCompanies(passwordDic, temporaryPassword,sendMail, company, context);
                     UpdateCompaniesFromApi(company, context);
                 }
-                context.SaveChanges();
-            }
+                    context.SaveChanges();
+
+                }
                 transaction.Complete();
             }
         }
