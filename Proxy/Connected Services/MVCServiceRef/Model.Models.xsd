@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Model.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Model" />
+  <xs:complexType name="ListOfCollections">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="Collection" nillable="true" type="q1:ArrayOfCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfCollections" nillable="true" type="tns:ListOfCollections" />
+  <xs:complexType name="CustomerGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerGroupNumber" type="xs:long" />
+      <xs:element minOccurs="0" name="Self" nillable="true" type="xs:anyURI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerGroup" nillable="true" type="tns:CustomerGroup" />
+  <xs:complexType name="Invoices">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Booked" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="Drafts" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="Self" nillable="true" type="xs:anyURI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Invoices" nillable="true" type="tns:Invoices" />
+  <xs:complexType name="Layout">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LayoutNumber" type="xs:long" />
+      <xs:element minOccurs="0" name="Self" nillable="true" type="xs:anyURI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Layout" nillable="true" type="tns:Layout" />
+  <xs:complexType name="PaymentTerms">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PaymentTermsNumber" type="xs:long" />
+      <xs:element minOccurs="0" name="Self" nillable="true" type="xs:anyURI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentTerms" nillable="true" type="tns:PaymentTerms" />
+  <xs:complexType name="Templates">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Invoice" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="InvoiceLine" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="Self" nillable="true" type="xs:anyURI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Templates" nillable="true" type="tns:Templates" />
+  <xs:complexType name="VatZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Self" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="VatZoneNumber" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VatZone" nillable="true" type="tns:VatZone" />
+</xs:schema>
