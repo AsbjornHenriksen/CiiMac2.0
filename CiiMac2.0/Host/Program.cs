@@ -17,7 +17,7 @@ namespace Host
          
 
             companyService = new CompanyService();
-            WebServiceHost host = new WebServiceHost(typeof(Service.CompanyService));
+            WebServiceHost host = new WebServiceHost(typeof(Service.MVCServices));
 
             host.Open();
             Console.WriteLine("Host started @ " + DateTime.Now.ToString());
