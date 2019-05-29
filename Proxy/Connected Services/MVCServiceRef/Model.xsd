@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Model.Models" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="ArrayOfCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Collection" nillable="true" type="tns:Collection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCollection" nillable="true" type="tns:ArrayOfCollection" />
+  <xs:complexType name="Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Balance" type="xs:double" />
+      <xs:element minOccurs="0" name="Barred" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contacts" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="CorporateIdentificationNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreditLimit" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Model.Models" minOccurs="0" name="CustomerGroup" nillable="true" type="q1:CustomerGroup" />
+      <xs:element minOccurs="0" name="CustomerNumber" type="xs:long" />
+      <xs:element minOccurs="0" name="DeliveryLocations" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="DueAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Model.Models" minOccurs="0" name="Invoices" nillable="true" type="q2:Invoices" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="LastUpdated" type="q3:DateTimeOffset" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Model.Models" minOccurs="0" name="Layout" nillable="true" type="q4:Layout" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model.Models" minOccurs="0" name="PaymentTerms" nillable="true" type="q5:PaymentTerms" />
+      <xs:element minOccurs="0" name="Self" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="TelephoneAndFaxNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Model.Models" minOccurs="0" name="Templates" nillable="true" type="q6:Templates" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Model.Models" minOccurs="0" name="Totals" nillable="true" type="q7:Invoices" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Model.Models" minOccurs="0" name="VatZone" nillable="true" type="q8:VatZone" />
+      <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Collection" nillable="true" type="tns:Collection" />
+</xs:schema>
