@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="453ba376-6008-4d98-897d-dde08ab57a57" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d4c30ac5-92b6-46ef-b978-5ff2f91a4220" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,16 +19,16 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8739/MVCServices/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="https://ciimac-systems.com/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="48e7dc43-5545-41f9-88f3-d539bff9de07" SourceId="1" SourceUrl="http://localhost:8739/MVCServices/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="c4c837ce-07e4-4105-b5c6-627f8130d8c4" SourceId="1" SourceUrl="http://localhost:8739/MVCServices/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c0742f06-537e-4ade-bffe-59f3097cb39d" SourceId="1" SourceUrl="http://localhost:8739/MVCServices/mex" />
-    <MetadataFile FileName="Model.Models.xsd" MetadataType="Schema" ID="bd3bd292-3273-45ec-8377-fac6df05d385" SourceId="1" SourceUrl="http://localhost:8739/MVCServices/mex" />
-    <MetadataFile FileName="Model.xsd" MetadataType="Schema" ID="4370a801-62ea-4346-b1f5-81497f1ff490" SourceId="1" SourceUrl="http://localhost:8739/MVCServices/mex" />
-    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="d821431f-06ca-40e1-8719-d6f651c19e23" SourceId="1" SourceUrl="http://localhost:8739/MVCServices/mex" />
-    <MetadataFile FileName="Model.DatabaseModels.xsd" MetadataType="Schema" ID="8e1420d9-0e52-4194-a218-b3f9ce368c38" SourceId="1" SourceUrl="http://localhost:8739/MVCServices/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="bc33131b-a9b2-413a-8b1a-0137c29e82f0" SourceId="1" SourceUrl="https://ciimac-systems.com/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="dd4f7f33-762b-4e34-9f90-54fb47770920" SourceId="1" SourceUrl="https://ciimac-systems.com/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c39922b9-cabb-4f62-8625-10acb31e28be" SourceId="1" SourceUrl="https://ciimac-systems.com/mex" />
+    <MetadataFile FileName="Model.Models.xsd" MetadataType="Schema" ID="6684f0d3-bcc4-4e14-9fbb-acf648c66d75" SourceId="1" SourceUrl="https://ciimac-systems.com/mex" />
+    <MetadataFile FileName="Model.xsd" MetadataType="Schema" ID="3e4179fa-d89e-4e25-b4fa-7b24d9afce31" SourceId="1" SourceUrl="https://ciimac-systems.com/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="f046f6bf-146b-44d5-8b30-71a146a95c4f" SourceId="1" SourceUrl="https://ciimac-systems.com/mex" />
+    <MetadataFile FileName="Model.DatabaseModels.xsd" MetadataType="Schema" ID="c903bccc-4329-48ef-96d2-7bd96b6234a7" SourceId="1" SourceUrl="https://ciimac-systems.com/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
