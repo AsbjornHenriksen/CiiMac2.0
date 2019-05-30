@@ -10,7 +10,7 @@ namespace DAL.MergeModels
 {
     public class MergeCompany
     {
-  
+        City city; 
         DeserializeJsonToObjects deserializeJsonToObjects;
         public MergeCompany()
         {
@@ -22,16 +22,26 @@ namespace DAL.MergeModels
 
             foreach (var field in deserializeJsonToObjects.GetListOfCollections("customers").Collection)
             {
+               
+                City city = new City { CityName = field.City , PostalCode = field.Zip  };
+             
+                Country country = new Country { CountryName = field.Country };
                 Company company = new Company
                 {
                     CustomerNumber = field.CustomerNumber,
                     Name = field.Name,
-                    CorporateIdentificationNumber = field.CorporateIdentificationNumber, 
+                    CorporateIdentificationNumber = field.CorporateIdentificationNumber,
                     Address = field.Address,
                     Phone = field.TelephoneAndFaxNumber,
-                    Email = field.Email
-                  
+                    Email = field.Email,
+                 
+
+                
+                    
                 };
+                company.City = city;
+                company.Country = country; 
+              
 
                listWithCompanies.Add(company); 
 

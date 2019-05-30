@@ -3,7 +3,7 @@ namespace DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class bigChange : DbMigration
+    public partial class first : DbMigration
     {
         public override void Up()
         {
@@ -30,21 +30,21 @@ namespace DAL.Migrations
                 "dbo.City",
                 c => new
                     {
-                        Id = c.Guid(nullable: false),
+                        CityId = c.Guid(nullable: false),
                         CityName = c.String(),
                         PostalCode = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.CityId);
             
             CreateTable(
                 "dbo.Country",
                 c => new
                     {
-                        Id = c.Guid(nullable: false),
+                        CountryId = c.Guid(nullable: false),
                         CountryName = c.String(),
                         CountryCode = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.CountryId);
             
             CreateTable(
                 "dbo.Company",
@@ -57,8 +57,16 @@ namespace DAL.Migrations
                         Phone = c.String(),
                         Email = c.String(),
                         Level = c.Int(nullable: false),
+                        CityId = c.Guid(nullable: false),
+                        CountryId = c.Guid(nullable: false),
+                        CompletePassword = c.Binary(),
+                        PasswordSalt = c.Binary(),
                     })
-                .PrimaryKey(t => t.CustomerNumber);
+                .PrimaryKey(t => t.CustomerNumber)
+                .ForeignKey("dbo.City", t => t.CityId, cascadeDelete: true)
+                .ForeignKey("dbo.Country", t => t.CountryId, cascadeDelete: true)
+                .Index(t => t.CityId)
+                .Index(t => t.CountryId);
             
             CreateTable(
                 "dbo.User",
@@ -81,9 +89,13 @@ namespace DAL.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.User", "CustomerNumber", "dbo.Company");
+            DropForeignKey("dbo.Company", "CountryId", "dbo.Country");
+            DropForeignKey("dbo.Company", "CityId", "dbo.City");
             DropForeignKey("dbo.Address", "CountryId", "dbo.Country");
             DropForeignKey("dbo.Address", "CityId", "dbo.City");
             DropIndex("dbo.User", new[] { "CustomerNumber" });
+            DropIndex("dbo.Company", new[] { "CountryId" });
+            DropIndex("dbo.Company", new[] { "CityId" });
             DropIndex("dbo.Address", new[] { "CountryId" });
             DropIndex("dbo.Address", new[] { "CityId" });
             DropTable("dbo.User");

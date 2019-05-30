@@ -104,14 +104,28 @@
     <Compile Include="API-Connection\BaseUrl.cs" />
     <Compile Include="API-Connection\DeserializeJsonToObjects.cs" />
     <Compile Include="API-Connection\SerializerSettings.cs" />
+    <Compile Include="DatabaseAccess\CityDB.cs" />
     <Compile Include="DatabaseAccess\CompanyDB.cs" />
+    <Compile Include="DatabaseAccess\CountryDB.cs" />
     <Compile Include="DatabaseAccess\UpdateDatabase.cs" />
     <Compile Include="DatabaseAccess\UserDB.cs" />
     <Compile Include="DBContext.cs" />
     <Compile Include="MergeModels\MergeCompany.cs" />
-    <Compile Include="Migrations\201905280941572_bigChange.cs" />
-    <Compile Include="Migrations\201905280941572_bigChange.Designer.cs">
-      <DependentUpon>201905280941572_bigChange.cs</DependentUpon>
+    <Compile Include="Migrations\201905300826203_first.cs" />
+    <Compile Include="Migrations\201905300826203_first.Designer.cs">
+      <DependentUpon>201905300826203_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905300834207_removeCountryCode.cs" />
+    <Compile Include="Migrations\201905300834207_removeCountryCode.Designer.cs">
+      <DependentUpon>201905300834207_removeCountryCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905300929430_removeForeignOnAdreess.cs" />
+    <Compile Include="Migrations\201905300929430_removeForeignOnAdreess.Designer.cs">
+      <DependentUpon>201905300929430_removeForeignOnAdreess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905300937078_removeF.cs" />
+    <Compile Include="Migrations\201905300937078_removeF.Designer.cs">
+      <DependentUpon>201905300937078_removeF.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,8 +141,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905280941572_bigChange.resx">
-      <DependentUpon>201905280941572_bigChange.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905300826203_first.resx">
+      <DependentUpon>201905300826203_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905300834207_removeCountryCode.resx">
+      <DependentUpon>201905300834207_removeCountryCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905300929430_removeForeignOnAdreess.resx">
+      <DependentUpon>201905300929430_removeForeignOnAdreess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905300937078_removeF.resx">
+      <DependentUpon>201905300937078_removeF.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using BusinessLogic.Controllers;
+using Model;
 using Service;
 using System;
 using System.Collections.Generic;
@@ -9,20 +10,15 @@ namespace Host
 {
     class Program
     {
-        static Timer aTimer;
-        static int lastHour;
-        static CompanyService companyService;
+        static UpdateDatabaseCtr updateDatabaseCtr;
         static void Main(string[] args)
         {
-         
-
-            companyService = new CompanyService();
             WebServiceHost host = new WebServiceHost(typeof(Service.MVCServices));
 
             host.Open();
             Console.WriteLine("Host started @ " + DateTime.Now.ToString());
-            DisplayHost(host);
-            companyService.UpdateDatabase();
+
+            Update(); 
 
             Console.ReadLine();
             host.Close();
@@ -39,6 +35,12 @@ namespace Host
 
             }
             Console.WriteLine("------------------");
+        }
+
+        private static void Update()
+        {
+            updateDatabaseCtr = new UpdateDatabaseCtr();
+            updateDatabaseCtr.UpdateDatabase();
         }
 
 

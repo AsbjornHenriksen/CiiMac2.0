@@ -85,6 +85,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{09C360CE-5803-4CFD-B8ED-029ADF2EDAB7}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{E244833F-E8A6-494A-8448-AAA29CC1B240}</Project>
       <Name>Model</Name>
