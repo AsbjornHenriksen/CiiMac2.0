@@ -15,12 +15,12 @@ namespace Model.DatabaseModels
     {
         [Key]
         [DataMember]
-        public Guid Id { get; set; }
+        public Guid CityId { get; set; }
         [DataMember]
         public string CityName { get; set; }
 
         [DataMember]
-        public int PostalCode { get; set; }
+        public string PostalCode { get; set; }
 
     }
 }

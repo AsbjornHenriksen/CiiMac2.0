@@ -43,9 +43,17 @@ namespace Model.DatabaseModels
         [DataMember]
         public int Level { get; set; }
 
-        public byte[] CompletePassword { private get; set; }
+        public Guid CityId { get; set; }
+        [ForeignKey("CityId")]
+        public virtual City City { get; set; }
 
-        public byte[] PasswordSalt { private get; set; }
+        public Guid CountryId { get; set; }
+        [ForeignKey("CountryId")]
+        public virtual Country Country { get; set; }
+
+        public byte[] CompletePassword { get; set; }
+
+        public byte[] PasswordSalt { get; set; }
 
 
     }

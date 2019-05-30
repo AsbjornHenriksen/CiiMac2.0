@@ -15,11 +15,10 @@ namespace Model.DatabaseModels
     {
         [Key]
         [DataMember]
-        public Guid Id { get; set; }
+        public Guid CountryId { get; set; }
         [DataMember]
         public string CountryName { get; set; }
 
-        [DataMember]
-        public int CountryCode { get; set; }
+       
     }
 }

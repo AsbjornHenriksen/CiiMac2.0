@@ -31,9 +31,11 @@ namespace Service
             throw new NotImplementedException();
         }
 
-        public void UpdateDatabase()
+        public Company ReturnCompanyIfLoginIsCorrect(string email, string password)
         {
             throw new NotImplementedException();
         }
+
+      
     }
 }

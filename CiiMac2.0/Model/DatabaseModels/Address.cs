@@ -32,13 +32,13 @@ namespace Model.DatabaseModels
         [DataMember]
         public bool CompanyAddressOrDeliveryAddress { get; set; }
 
-        public Guid CityId { get; set; }
-        [ForeignKey("CityId")]
-        public City City { get; set; }
+        //public Guid CityId { get; set; }
+        //[ForeignKey("CityId")]
+        //public City City { get; set; }
 
-        public Guid CountryId { get; set; }
-        [ForeignKey("CountryId")]
-        public Country Country { get; set; }
+        //public Guid CountryId { get; set; }
+        //[ForeignKey("CountryId")]
+        //public Country Country { get; set; }
 
     }
 }
