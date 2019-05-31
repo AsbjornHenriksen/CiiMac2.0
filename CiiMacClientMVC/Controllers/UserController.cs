@@ -4,8 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Web;
 using System.Web.Mvc;
-using Proxy;
-using Proxy.MVCServiceRef;
+
 
 namespace CiiMacClientMVC.Controllers
 {
@@ -18,18 +17,18 @@ namespace CiiMacClientMVC.Controllers
             return View();
         }
 
-        public ActionResult InsertUser(User user, string password)
+        public ActionResult InsertUser()
         {
-            try
-            {
-                UserClient userClient = new UserClient();
+            //try
+            //{
+            //    UserClient userClient = new UserClient();
 
-                userClient.CreateUser(user, password);
-            }
-            catch (FaultException ex)
-            {
-                ex.StackTrace.ToString();
-            }
+            //    userClient.CreateUser(user, password);
+            //}
+            //catch (FaultException ex)
+            //{
+            //    ex.StackTrace.ToString();
+            //}
 
             return View();
         }

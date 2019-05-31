@@ -1931,7 +1931,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10488</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost/</IISUrl>
+          <IISUrl>http://localhost:10488/MVCServices</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
