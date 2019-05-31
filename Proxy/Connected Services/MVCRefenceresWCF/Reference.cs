@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proxy.MVCServiceRef {
+namespace Proxy.MVCRefenceresWCF {
     using System.Runtime.Serialization;
     using System;
     
@@ -23,7 +23,7 @@ namespace Proxy.MVCServiceRef {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCServiceRef.Collection[] CollectionField;
+        private Proxy.MVCRefenceresWCF.Collection[] CollectionField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -36,7 +36,7 @@ namespace Proxy.MVCServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCServiceRef.Collection[] Collection {
+        public Proxy.MVCRefenceresWCF.Collection[] Collection {
             get {
                 return this.CollectionField;
             }
@@ -95,7 +95,7 @@ namespace Proxy.MVCServiceRef {
         private string CurrencyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCServiceRef.CustomerGroup CustomerGroupField;
+        private Proxy.MVCRefenceresWCF.CustomerGroup CustomerGroupField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private long CustomerNumberField;
@@ -110,19 +110,19 @@ namespace Proxy.MVCServiceRef {
         private string EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCServiceRef.Invoices InvoicesField;
+        private Proxy.MVCRefenceresWCF.Invoices InvoicesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTimeOffset LastUpdatedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCServiceRef.Layout LayoutField;
+        private Proxy.MVCRefenceresWCF.Layout LayoutField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCServiceRef.PaymentTerms PaymentTermsField;
+        private Proxy.MVCRefenceresWCF.PaymentTerms PaymentTermsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Uri SelfField;
@@ -131,13 +131,13 @@ namespace Proxy.MVCServiceRef {
         private string TelephoneAndFaxNumberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCServiceRef.Templates TemplatesField;
+        private Proxy.MVCRefenceresWCF.Templates TemplatesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCServiceRef.Invoices TotalsField;
+        private Proxy.MVCRefenceresWCF.Invoices TotalsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCServiceRef.VatZone VatZoneField;
+        private Proxy.MVCRefenceresWCF.VatZone VatZoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string WebsiteField;
@@ -273,7 +273,7 @@ namespace Proxy.MVCServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCServiceRef.CustomerGroup CustomerGroup {
+        public Proxy.MVCRefenceresWCF.CustomerGroup CustomerGroup {
             get {
                 return this.CustomerGroupField;
             }
@@ -338,7 +338,7 @@ namespace Proxy.MVCServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCServiceRef.Invoices Invoices {
+        public Proxy.MVCRefenceresWCF.Invoices Invoices {
             get {
                 return this.InvoicesField;
             }
@@ -364,7 +364,7 @@ namespace Proxy.MVCServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCServiceRef.Layout Layout {
+        public Proxy.MVCRefenceresWCF.Layout Layout {
             get {
                 return this.LayoutField;
             }
@@ -390,7 +390,7 @@ namespace Proxy.MVCServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCServiceRef.PaymentTerms PaymentTerms {
+        public Proxy.MVCRefenceresWCF.PaymentTerms PaymentTerms {
             get {
                 return this.PaymentTermsField;
             }
@@ -429,7 +429,7 @@ namespace Proxy.MVCServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCServiceRef.Templates Templates {
+        public Proxy.MVCRefenceresWCF.Templates Templates {
             get {
                 return this.TemplatesField;
             }
@@ -442,7 +442,7 @@ namespace Proxy.MVCServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCServiceRef.Invoices Totals {
+        public Proxy.MVCRefenceresWCF.Invoices Totals {
             get {
                 return this.TotalsField;
             }
@@ -455,7 +455,7 @@ namespace Proxy.MVCServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCServiceRef.VatZone VatZone {
+        public Proxy.MVCRefenceresWCF.VatZone VatZone {
             get {
                 return this.VatZoneField;
             }
@@ -903,163 +903,6 @@ namespace Proxy.MVCServiceRef {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/Model.DatabaseModels")]
-    [System.SerializableAttribute()]
-    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCServiceRef.Collection1 CompanyField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long CustomerNumberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int LevelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PhoneField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCServiceRef.Collection1 Company {
-            get {
-                return this.CompanyField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CompanyField, value) != true)) {
-                    this.CompanyField = value;
-                    this.RaisePropertyChanged("Company");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long CustomerNumber {
-            get {
-                return this.CustomerNumberField;
-            }
-            set {
-                if ((this.CustomerNumberField.Equals(value) != true)) {
-                    this.CustomerNumberField = value;
-                    this.RaisePropertyChanged("CustomerNumber");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FirstName {
-            get {
-                return this.FirstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
-                    this.FirstNameField = value;
-                    this.RaisePropertyChanged("FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LastName {
-            get {
-                return this.LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
-                    this.LastNameField = value;
-                    this.RaisePropertyChanged("LastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Level {
-            get {
-                return this.LevelField;
-            }
-            set {
-                if ((this.LevelField.Equals(value) != true)) {
-                    this.LevelField = value;
-                    this.RaisePropertyChanged("Level");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Phone {
-            get {
-                return this.PhoneField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
-                    this.PhoneField = value;
-                    this.RaisePropertyChanged("Phone");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Collection", Namespace="http://schemas.datacontract.org/2004/07/Model.DatabaseModels")]
     [System.SerializableAttribute()]
     public partial class Collection1 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1199,30 +1042,187 @@ namespace Proxy.MVCServiceRef {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MVCServiceRef.ICompanyService")]
-    public interface ICompanyService {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/Model.DatabaseModels")]
+    [System.SerializableAttribute()]
+    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetList", ReplyAction="http://tempuri.org/ICompanyService/GetListResponse")]
-        Proxy.MVCServiceRef.ListOfCollections GetList();
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetList", ReplyAction="http://tempuri.org/ICompanyService/GetListResponse")]
-        System.Threading.Tasks.Task<Proxy.MVCServiceRef.ListOfCollections> GetListAsync();
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Proxy.MVCRefenceresWCF.Collection1 CompanyField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/UpdateDatabase", ReplyAction="http://tempuri.org/ICompanyService/UpdateDatabaseResponse")]
-        void UpdateDatabase();
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long CustomerNumberField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/UpdateDatabase", ReplyAction="http://tempuri.org/ICompanyService/UpdateDatabaseResponse")]
-        System.Threading.Tasks.Task UpdateDatabaseAsync();
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LevelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Proxy.MVCRefenceresWCF.Collection1 Company {
+            get {
+                return this.CompanyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyField, value) != true)) {
+                    this.CompanyField = value;
+                    this.RaisePropertyChanged("Company");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long CustomerNumber {
+            get {
+                return this.CustomerNumberField;
+            }
+            set {
+                if ((this.CustomerNumberField.Equals(value) != true)) {
+                    this.CustomerNumberField = value;
+                    this.RaisePropertyChanged("CustomerNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FirstName {
+            get {
+                return this.FirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Level {
+            get {
+                return this.LevelField;
+            }
+            set {
+                if ((this.LevelField.Equals(value) != true)) {
+                    this.LevelField = value;
+                    this.RaisePropertyChanged("Level");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICompanyServiceChannel : Proxy.MVCServiceRef.ICompanyService, System.ServiceModel.IClientChannel {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MVCRefenceresWCF.ICompanyService")]
+    public interface ICompanyService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetList", ReplyAction="http://tempuri.org/ICompanyService/GetListResponse")]
+        Proxy.MVCRefenceresWCF.ListOfCollections GetList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetList", ReplyAction="http://tempuri.org/ICompanyService/GetListResponse")]
+        System.Threading.Tasks.Task<Proxy.MVCRefenceresWCF.ListOfCollections> GetListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrect", ReplyAction="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrectResponse")]
+        Proxy.MVCRefenceresWCF.Collection1 ReturnCompanyIfLoginIsCorrect(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrect", ReplyAction="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrectResponse")]
+        System.Threading.Tasks.Task<Proxy.MVCRefenceresWCF.Collection1> ReturnCompanyIfLoginIsCorrectAsync(string email, string password);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ICompanyServiceChannel : Proxy.MVCRefenceresWCF.ICompanyService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CompanyServiceClient : System.ServiceModel.ClientBase<Proxy.MVCServiceRef.ICompanyService>, Proxy.MVCServiceRef.ICompanyService {
+    public partial class CompanyServiceClient : System.ServiceModel.ClientBase<Proxy.MVCRefenceresWCF.ICompanyService>, Proxy.MVCRefenceresWCF.ICompanyService {
         
         public CompanyServiceClient() {
         }
@@ -1243,41 +1243,41 @@ namespace Proxy.MVCServiceRef {
                 base(binding, remoteAddress) {
         }
         
-        public Proxy.MVCServiceRef.ListOfCollections GetList() {
+        public Proxy.MVCRefenceresWCF.ListOfCollections GetList() {
             return base.Channel.GetList();
         }
         
-        public System.Threading.Tasks.Task<Proxy.MVCServiceRef.ListOfCollections> GetListAsync() {
+        public System.Threading.Tasks.Task<Proxy.MVCRefenceresWCF.ListOfCollections> GetListAsync() {
             return base.Channel.GetListAsync();
         }
         
-        public void UpdateDatabase() {
-            base.Channel.UpdateDatabase();
+        public Proxy.MVCRefenceresWCF.Collection1 ReturnCompanyIfLoginIsCorrect(string email, string password) {
+            return base.Channel.ReturnCompanyIfLoginIsCorrect(email, password);
         }
         
-        public System.Threading.Tasks.Task UpdateDatabaseAsync() {
-            return base.Channel.UpdateDatabaseAsync();
+        public System.Threading.Tasks.Task<Proxy.MVCRefenceresWCF.Collection1> ReturnCompanyIfLoginIsCorrectAsync(string email, string password) {
+            return base.Channel.ReturnCompanyIfLoginIsCorrectAsync(email, password);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MVCServiceRef.IUserService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MVCRefenceresWCF.IUserService")]
     public interface IUserService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CreateUser", ReplyAction="http://tempuri.org/IUserService/CreateUserResponse")]
-        Proxy.MVCServiceRef.User CreateUser(Proxy.MVCServiceRef.User user, string password);
+        Proxy.MVCRefenceresWCF.User CreateUser(Proxy.MVCRefenceresWCF.User user, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CreateUser", ReplyAction="http://tempuri.org/IUserService/CreateUserResponse")]
-        System.Threading.Tasks.Task<Proxy.MVCServiceRef.User> CreateUserAsync(Proxy.MVCServiceRef.User user, string password);
+        System.Threading.Tasks.Task<Proxy.MVCRefenceresWCF.User> CreateUserAsync(Proxy.MVCRefenceresWCF.User user, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IUserServiceChannel : Proxy.MVCServiceRef.IUserService, System.ServiceModel.IClientChannel {
+    public interface IUserServiceChannel : Proxy.MVCRefenceresWCF.IUserService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class UserServiceClient : System.ServiceModel.ClientBase<Proxy.MVCServiceRef.IUserService>, Proxy.MVCServiceRef.IUserService {
+    public partial class UserServiceClient : System.ServiceModel.ClientBase<Proxy.MVCRefenceresWCF.IUserService>, Proxy.MVCRefenceresWCF.IUserService {
         
         public UserServiceClient() {
         }
@@ -1298,11 +1298,11 @@ namespace Proxy.MVCServiceRef {
                 base(binding, remoteAddress) {
         }
         
-        public Proxy.MVCServiceRef.User CreateUser(Proxy.MVCServiceRef.User user, string password) {
+        public Proxy.MVCRefenceresWCF.User CreateUser(Proxy.MVCRefenceresWCF.User user, string password) {
             return base.Channel.CreateUser(user, password);
         }
         
-        public System.Threading.Tasks.Task<Proxy.MVCServiceRef.User> CreateUserAsync(Proxy.MVCServiceRef.User user, string password) {
+        public System.Threading.Tasks.Task<Proxy.MVCRefenceresWCF.User> CreateUserAsync(Proxy.MVCRefenceresWCF.User user, string password) {
             return base.Channel.CreateUserAsync(user, password);
         }
     }
