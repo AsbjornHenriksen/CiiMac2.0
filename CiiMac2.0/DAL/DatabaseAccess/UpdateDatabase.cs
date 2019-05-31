@@ -101,42 +101,48 @@ namespace DAL.DatabaseAccess
         
                     if (CheckIfCompanyAlreadyExist(company.CustomerNumber))
                     {
-                      City city = dBContext.Cities.Where(c => c.PostalCode == company.City.PostalCode).First();
-                      Country country = dBContext.Countries.Where(c => c.CountryName == company.Country.CountryName).First();
+                   
                       Company com = dBContext.Companies.Where(c => c.CustomerNumber == company.CustomerNumber).First();
                       com.Name = company.Name;
                       com.CorporateIdentificationNumber = company.CorporateIdentificationNumber;
                       com.Address = company.Address;
                       com.Phone = company.Phone;
                       com.Email = company.Email;
-                if (city == null)
-                {
-                    
-                    com.City.CityId = company.CityId;
-                    com.City.CityName = company.City.CityName;
-                    com.City.PostalCode = company.City.PostalCode;
 
-                }
-                else {
-                    com.City.CityId = city.CityId;
-                    com.City.CityName = city.CityName;
-                    com.City.PostalCode = city.PostalCode;
-
-                }
-                if (country == null)
+                if (company.City.PostalCode != "")
                 {
 
-                    com.Country.CountryId = company.CountryId;
-                    com.Country.CountryName = company.Country.CountryName;
+                    City city = dBContext.Cities.Where(c => c.PostalCode == company.City.PostalCode).SingleOrDefault();
+                    if (city != null)
+                    {
+                        company.CityId = city.CityId;
+                    }
+                    else
+                    {
+                        company.City.CityId = Guid.NewGuid();
+                        company.CityId = company.City.CityId;
 
+                    }
                 }
-                else {
 
-                    com.Country.CountryId = country.CountryId;
-                    com.Country.CountryName = country.CountryName;
 
+
+
+                if (company.Country.CountryName != "")
+                {
+
+                    Country country = dBContext.Countries.Where(c => c.CountryName == company.Country.CountryName).SingleOrDefault();
+                    if (country != null)
+                    {
+                        company.CountryId = country.CountryId;
+                    }
+                    else
+                    {
+                        company.Country.CountryId = Guid.NewGuid();
+                        company.CountryId = company.Country.CountryId;
+
+                    }
                 }
-
             }
 
         }
@@ -150,8 +156,8 @@ namespace DAL.DatabaseAccess
                 foreach (Company company in merge.MergeLoginDatabaseModelWithApiCollection())
                 {
                     InsertNewCompanies(passwordDic, temporaryPassword,sendMail, company, context);
-                    //UpdateCompaniesFromApi(company, context);
-                }
+                    UpdateCompaniesFromApi(company, context);
+                    }
                     context.SaveChanges();
 
                 }
