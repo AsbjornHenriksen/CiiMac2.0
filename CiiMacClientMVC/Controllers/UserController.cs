@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Proxy;
+using Proxy.MVCRefenceresWCF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.ServiceModel;
 using System.Web;
 using System.Web.Mvc;
@@ -17,18 +20,18 @@ namespace CiiMacClientMVC.Controllers
             return View();
         }
 
-        public ActionResult InsertUser()
+        public ActionResult InsertUser(User user, string password)
         {
-            //try
-            //{
-            //    UserClient userClient = new UserClient();
+            try
+            {
+                UserClient userClient = new UserClient();
 
-            //    userClient.CreateUser(user, password);
-            //}
-            //catch (FaultException ex)
-            //{
-            //    ex.StackTrace.ToString();
-            //}
+                userClient.CreateUser(user, password);
+            }
+            catch (FaultException ex)
+            {
+                ex.StackTrace.ToString();
+            }
 
             return View();
         }
