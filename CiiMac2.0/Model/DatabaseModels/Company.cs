@@ -12,7 +12,7 @@ namespace Model.DatabaseModels
 {
    
     
-    [DataContract(Name = "Collection")]
+    [DataContract]
     [Table("Company")]
     public class Company
     {

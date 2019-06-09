@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e0bfab12-e412-4ae6-866e-a32f08655a7f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost:45398/MVCServices/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="8e4fbe1f-0702-49c6-9da1-48efdc5a7a51" SourceId="1" SourceUrl="https://localhost:45398/MVCServices/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="106c71d3-7a3e-4cb1-a1a4-2d5b5202e5f1" SourceId="1" SourceUrl="https://localhost:45398/MVCServices/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6f47e28b-f8ba-4999-8862-4f7235d22c61" SourceId="1" SourceUrl="https://localhost:45398/MVCServices/mex" />
+    <MetadataFile FileName="Model.Models.xsd" MetadataType="Schema" ID="5f181e79-06d3-4f1b-8e65-092d91d5b7c2" SourceId="1" SourceUrl="https://localhost:45398/MVCServices/mex" />
+    <MetadataFile FileName="Model.xsd" MetadataType="Schema" ID="749391f6-448d-4d0a-8064-4448c32998d0" SourceId="1" SourceUrl="https://localhost:45398/MVCServices/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="3d748c6b-3a84-4eaf-9253-e4148abf7c57" SourceId="1" SourceUrl="https://localhost:45398/MVCServices/mex" />
+    <MetadataFile FileName="Model.DatabaseModels.xsd" MetadataType="Schema" ID="110b56b3-15b9-45b5-843d-a05a887696c4" SourceId="1" SourceUrl="https://localhost:45398/MVCServices/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

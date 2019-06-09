@@ -19,11 +19,7 @@ namespace Service
             companyCtr = new CompanyCtr();
         }
     
-        public ListOfCollections GetList()
-        {
-            GetListOfCompanies getListOfCompanies = new GetListOfCompanies();
-            return getListOfCompanies.GetListOfCustomers();
-        }
+      
 
         public Company ReturnCompanyIfLoginIsCorrect(string email, string password)
         {

@@ -14,8 +14,7 @@ namespace Service
     [ServiceContract]
     public interface ICompanyService
     {
-        [OperationContract]
-        ListOfCollections GetList();
+       
         [OperationContract]
         Company ReturnCompanyIfLoginIsCorrect(string email, string password);
 
