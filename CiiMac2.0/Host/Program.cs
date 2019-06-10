@@ -18,7 +18,6 @@ namespace Host
 
             host.Open();
             Console.WriteLine("Host started @ " + DateTime.Now.ToString());
-
             Update();
             DisplayHost(host);
             Console.ReadLine();
