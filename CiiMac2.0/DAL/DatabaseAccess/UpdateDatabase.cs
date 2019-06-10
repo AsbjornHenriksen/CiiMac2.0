@@ -79,7 +79,7 @@ namespace DAL.DatabaseAccess
 
 
 
-                string temp = temporaryPassword();
+                         string temp = temporaryPassword();
                          Dictionary<string, byte[]> dic = passwordDic(temp);
                          byte[] passwordSalt = dic["passwordSalt"];
                          byte[] completePassword = dic["completePassword"];
@@ -109,18 +109,26 @@ namespace DAL.DatabaseAccess
                       com.Phone = company.Phone;
                       com.Email = company.Email;
 
-                if (company.City.PostalCode != "")
+                if (company.City.PostalCode != "" || company.City.CityName != "")
                 {
 
                     City city = dBContext.Cities.Where(c => c.PostalCode == company.City.PostalCode).SingleOrDefault();
                     if (city != null)
                     {
-                        company.CityId = city.CityId;
+                        com.CityId = city.CityId;
                     }
                     else
                     {
-                        company.City.CityId = Guid.NewGuid();
-                        company.CityId = company.City.CityId;
+                        City ci = new City(); 
+                       ci.CityId = Guid.NewGuid();
+                        ci.CityName = company.City.CityName;
+                        ci.PostalCode = company.City.PostalCode;
+                       
+                        com.City = ci;
+                        com.CityId = ci.CityId;
+                      
+
+
 
                     }
                 }
@@ -134,12 +142,17 @@ namespace DAL.DatabaseAccess
                     Country country = dBContext.Countries.Where(c => c.CountryName == company.Country.CountryName).SingleOrDefault();
                     if (country != null)
                     {
-                        company.CountryId = country.CountryId;
+                       com.CountryId = country.CountryId;
                     }
                     else
                     {
-                        company.Country.CountryId = Guid.NewGuid();
-                        company.CountryId = company.Country.CountryId;
+                        Country coun = new Country();
+                        coun.CountryId = Guid.NewGuid();
+                        coun.CountryName = company.Country.CountryName;
+                    
+                        com.Country = coun;
+                        com.CountryId = coun.CountryId;
+                       
 
                     }
                 }

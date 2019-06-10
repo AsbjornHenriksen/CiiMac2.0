@@ -1875,7 +1875,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1909,7 +1911,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Proxy\Proxy.csproj">
-      <Project>{36713A9F-B885-469C-AC30-37973E759C34}</Project>
+      <Project>{36713a9f-b885-469c-ac30-37973e759c34}</Project>
       <Name>Proxy</Name>
     </ProjectReference>
   </ItemGroup>
