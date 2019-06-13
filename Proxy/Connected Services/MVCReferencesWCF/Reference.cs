@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proxy.MVCSevicess {
+namespace Proxy.MVCReferencesWCF {
     using System.Runtime.Serialization;
     using System;
     
@@ -164,7 +164,7 @@ namespace Proxy.MVCSevicess {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Proxy.MVCSevicess.Company CompanyField;
+        private Proxy.MVCReferencesWCF.Company CompanyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private long CustomerNumberField;
@@ -198,7 +198,7 @@ namespace Proxy.MVCSevicess {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Proxy.MVCSevicess.Company Company {
+        public Proxy.MVCReferencesWCF.Company Company {
             get {
                 return this.CompanyField;
             }
@@ -312,23 +312,23 @@ namespace Proxy.MVCSevicess {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MVCSevicess.ICompanyService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MVCReferencesWCF.ICompanyService")]
     public interface ICompanyService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrect", ReplyAction="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrectResponse")]
-        Proxy.MVCSevicess.Company ReturnCompanyIfLoginIsCorrect(string email, string password);
+        Proxy.MVCReferencesWCF.Company ReturnCompanyIfLoginIsCorrect(string email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrect", ReplyAction="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrectResponse")]
-        System.Threading.Tasks.Task<Proxy.MVCSevicess.Company> ReturnCompanyIfLoginIsCorrectAsync(string email, string password);
+        System.Threading.Tasks.Task<Proxy.MVCReferencesWCF.Company> ReturnCompanyIfLoginIsCorrectAsync(string email, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICompanyServiceChannel : Proxy.MVCSevicess.ICompanyService, System.ServiceModel.IClientChannel {
+    public interface ICompanyServiceChannel : Proxy.MVCReferencesWCF.ICompanyService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CompanyServiceClient : System.ServiceModel.ClientBase<Proxy.MVCSevicess.ICompanyService>, Proxy.MVCSevicess.ICompanyService {
+    public partial class CompanyServiceClient : System.ServiceModel.ClientBase<Proxy.MVCReferencesWCF.ICompanyService>, Proxy.MVCReferencesWCF.ICompanyService {
         
         public CompanyServiceClient() {
         }
@@ -349,33 +349,33 @@ namespace Proxy.MVCSevicess {
                 base(binding, remoteAddress) {
         }
         
-        public Proxy.MVCSevicess.Company ReturnCompanyIfLoginIsCorrect(string email, string password) {
+        public Proxy.MVCReferencesWCF.Company ReturnCompanyIfLoginIsCorrect(string email, string password) {
             return base.Channel.ReturnCompanyIfLoginIsCorrect(email, password);
         }
         
-        public System.Threading.Tasks.Task<Proxy.MVCSevicess.Company> ReturnCompanyIfLoginIsCorrectAsync(string email, string password) {
+        public System.Threading.Tasks.Task<Proxy.MVCReferencesWCF.Company> ReturnCompanyIfLoginIsCorrectAsync(string email, string password) {
             return base.Channel.ReturnCompanyIfLoginIsCorrectAsync(email, password);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MVCSevicess.IUserService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MVCReferencesWCF.IUserService")]
     public interface IUserService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CreateUser", ReplyAction="http://tempuri.org/IUserService/CreateUserResponse")]
-        Proxy.MVCSevicess.User CreateUser(Proxy.MVCSevicess.User user, string password);
+        Proxy.MVCReferencesWCF.User CreateUser(Proxy.MVCReferencesWCF.User user, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CreateUser", ReplyAction="http://tempuri.org/IUserService/CreateUserResponse")]
-        System.Threading.Tasks.Task<Proxy.MVCSevicess.User> CreateUserAsync(Proxy.MVCSevicess.User user, string password);
+        System.Threading.Tasks.Task<Proxy.MVCReferencesWCF.User> CreateUserAsync(Proxy.MVCReferencesWCF.User user, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IUserServiceChannel : Proxy.MVCSevicess.IUserService, System.ServiceModel.IClientChannel {
+    public interface IUserServiceChannel : Proxy.MVCReferencesWCF.IUserService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class UserServiceClient : System.ServiceModel.ClientBase<Proxy.MVCSevicess.IUserService>, Proxy.MVCSevicess.IUserService {
+    public partial class UserServiceClient : System.ServiceModel.ClientBase<Proxy.MVCReferencesWCF.IUserService>, Proxy.MVCReferencesWCF.IUserService {
         
         public UserServiceClient() {
         }
@@ -396,11 +396,11 @@ namespace Proxy.MVCSevicess {
                 base(binding, remoteAddress) {
         }
         
-        public Proxy.MVCSevicess.User CreateUser(Proxy.MVCSevicess.User user, string password) {
+        public Proxy.MVCReferencesWCF.User CreateUser(Proxy.MVCReferencesWCF.User user, string password) {
             return base.Channel.CreateUser(user, password);
         }
         
-        public System.Threading.Tasks.Task<Proxy.MVCSevicess.User> CreateUserAsync(Proxy.MVCSevicess.User user, string password) {
+        public System.Threading.Tasks.Task<Proxy.MVCReferencesWCF.User> CreateUserAsync(Proxy.MVCReferencesWCF.User user, string password) {
             return base.Channel.CreateUserAsync(user, password);
         }
     }

@@ -1,5 +1,5 @@
 ﻿using Proxy;
-using Proxy.MVCRefenceresWCF;
+using Proxy.MVCReferencesWCF;
 using System;
 using System.Collections.Generic;
 using System.Linq;

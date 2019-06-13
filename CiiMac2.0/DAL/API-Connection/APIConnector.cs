@@ -24,8 +24,8 @@ namespace DAL.API_Connection
             string newString = BaseUrl.GetBaseUrl() + url;
             Uri uri = new Uri(newString);
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.Add("X-AppSecretToken", "aMegSjKTWmlZob05bt0xFg9bozLn6XnNGChYvJEInCQ1");
-            httpClient.DefaultRequestHeaders.Add("X-AgreementGrantToken", "hFskSHutDdMP2wyct7nwnxh739ykhrHMyZnkbPlk5941");
+            httpClient.DefaultRequestHeaders.Add("X-AppSecretToken", "bDMv9J60Au5DtZfjI8ipJHbBwheKPLwivvgu556Jktc1");
+            httpClient.DefaultRequestHeaders.Add("X-AgreementGrantToken", "fltVfLKAfiwy7QQoVFMTfdBT8iZz050AeIaJzVJd4F41");
 
             return httpClient.GetStringAsync(uri).Result;
         }

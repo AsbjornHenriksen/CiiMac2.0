@@ -58,18 +58,9 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Model.Models" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Model" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/Model.DatabaseModels" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ICompanyService_GetList_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetList" />
-  </wsdl:message>
-  <wsdl:message name="ICompanyService_GetList_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetListResponse" />
-  </wsdl:message>
   <wsdl:message name="ICompanyService_ReturnCompanyIfLoginIsCorrect_InputMessage">
     <wsdl:part name="parameters" element="tns:ReturnCompanyIfLoginIsCorrect" />
   </wsdl:message>
@@ -83,10 +74,6 @@
     <wsdl:part name="parameters" element="tns:CreateUserResponse" />
   </wsdl:message>
   <wsdl:portType name="ICompanyService">
-    <wsdl:operation name="GetList">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICompanyService/GetList" message="tns:ICompanyService_GetList_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICompanyService/GetListResponse" message="tns:ICompanyService_GetList_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="ReturnCompanyIfLoginIsCorrect">
       <wsdl:input wsaw:Action="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrect" message="tns:ICompanyService_ReturnCompanyIfLoginIsCorrect_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrectResponse" message="tns:ICompanyService_ReturnCompanyIfLoginIsCorrect_OutputMessage" />
@@ -101,15 +88,6 @@
   <wsdl:binding name="CompanyService" type="tns:ICompanyService">
     <wsp:PolicyReference URI="#CompanyService_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetList">
-      <soap12:operation soapAction="http://tempuri.org/ICompanyService/GetList" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="ReturnCompanyIfLoginIsCorrect">
       <soap12:operation soapAction="http://tempuri.org/ICompanyService/ReturnCompanyIfLoginIsCorrect" style="document" />
       <wsdl:input>

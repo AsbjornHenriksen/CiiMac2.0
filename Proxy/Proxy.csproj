@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompanyClient.cs" />
-    <Compile Include="Connected Services\MVCRefenceresWCF\Reference.cs">
+    <Compile Include="Connected Services\MVCReferencesWCF\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -65,47 +65,26 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MVCRefenceresWCF\Model.DatabaseModels.xsd">
+    <None Include="Connected Services\MVCReferencesWCF\Model.DatabaseModels.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MVCRefenceresWCF\Model.Models.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\MVCRefenceresWCF\Model.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\MVCRefenceresWCF\Proxy.MVCRefenceresWCF.Collection1.datasource">
+    <None Include="Connected Services\MVCReferencesWCF\Proxy.MVCReferencesWCF.Company.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MVCRefenceresWCF\Proxy.MVCRefenceresWCF.ListOfCollections.datasource">
+    <None Include="Connected Services\MVCReferencesWCF\Proxy.MVCReferencesWCF.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MVCRefenceresWCF\Proxy.MVCRefenceresWCF.User.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MVCRefenceresWCF\service.wsdl" />
-    <None Include="Connected Services\MVCRefenceresWCF\service.xsd">
+    <None Include="Connected Services\MVCReferencesWCF\service.wsdl" />
+    <None Include="Connected Services\MVCReferencesWCF\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MVCRefenceresWCF\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\MVCRefenceresWCF\System.xsd">
+    <None Include="Connected Services\MVCReferencesWCF\service1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MVCSevicess\Model.DatabaseModels.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MVCSevicess\Model.Models.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\MVCSevicess\Model.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\MVCSevicess\Proxy.MVCSevicess.Collection1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MVCSevicess\Proxy.MVCSevicess.ListOfCollections.datasource">
+    <None Include="Connected Services\MVCSevicess\Proxy.MVCSevicess.Company.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MVCSevicess\Proxy.MVCSevicess.User.datasource">
@@ -118,22 +97,19 @@
     <None Include="Connected Services\MVCSevicess\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MVCSevicess\System.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\MVCRefenceresWCF\" />
+    <WCFMetadataStorage Include="Connected Services\MVCReferencesWCF\" />
     <WCFMetadataStorage Include="Connected Services\MVCSevicess\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\MVCRefenceresWCF\configuration91.svcinfo" />
+    <None Include="Connected Services\MVCReferencesWCF\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\MVCRefenceresWCF\configuration.svcinfo" />
+    <None Include="Connected Services\MVCReferencesWCF\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\MVCRefenceresWCF\Reference.svcmap">
+    <None Include="Connected Services\MVCReferencesWCF\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -13,7 +13,13 @@ namespace Service
     public class MVCServices : IMVCServices, ICompanyService, IUserService
     {
         UpdateDatabaseCtr companyCtr = new UpdateDatabaseCtr();
-        UserCtr userCtr = new UserCtr(); 
+        UserCtr userCtr = new UserCtr();
+
+        public Company ReturnCompanyIfLoginIsCorrect(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
+
         public User CreateUser(User user, string password)
         {
             try
@@ -31,10 +37,7 @@ namespace Service
             throw new NotImplementedException();
         }
 
-        public Company ReturnCompanyIfLoginIsCorrect(string email, string password)
-        {
-            throw new NotImplementedException();
-        }
+
 
       
     }
